@@ -73,11 +73,11 @@ Start-Transcript -Path C:\windows\temp\Qualys-Agent.txt -Append
 
 function SetQualysRegKeys {
     New-Item -Path "HKLM:\SOFTWARE\Qualys\QualysAgent\ScanOnDemand" -Name "Inventory"
-    New-ItemProperty -Path "HKLM:\SOFTWARE\Qualys\QualysAgent\ScanOnDemand\Inventory" -Name "ScanOnDemand" -Value "1"  -PropertyType DWord
+    Set-ItemProperty -Path "HKLM:\SOFTWARE\Qualys\QualysAgent\ScanOnDemand\Inventory" -Name "ScanOnDemand" -Value "1"  -PropertyType DWord
     New-Item -Path "HKLM:\SOFTWARE\Qualys\QualysAgent\ScanOnDemand" -Name Vulnerability
-    New-ItemProperty -Path "HKLM:\SOFTWARE\Qualys\QualysAgent\ScanOnDemand\Vulnerability" -Name "ScanOnDemand" -Value "1"  -PropertyType DWord
+    Set-ItemProperty -Path "HKLM:\SOFTWARE\Qualys\QualysAgent\ScanOnDemand\Vulnerability" -Name "ScanOnDemand" -Value "1"  -PropertyType DWord
     New-Item -Path "HKLM:\SOFTWARE\Qualys\QualysAgent\ScanOnDemand" -Name PolicyCompliance
-    New-ItemProperty -Path "HKLM:\SOFTWARE\Qualys\QualysAgent\ScanOnDemand\PolicyCompliance" -Name "ScanOnDemand" -Value "1"  -PropertyType DWord
+    Set-ItemProperty -Path "HKLM:\SOFTWARE\Qualys\QualysAgent\ScanOnDemand\PolicyCompliance" -Name "ScanOnDemand" -Value "1"  -PropertyType DWord
 }
 
 $QualysRegKey = $false
@@ -107,7 +107,7 @@ else
 Write-Host [=]
 Write-Host [=]
 Write-Host [+] Qualys Scan On Demand reg keys have been set! -ForegroundColor Green
-Write-Host [+] The Qualys agent will check the registry in ~3 minutes and perform an, On Demand Scan. -ForegroundColor Green
+Write-Host [+] The Qualys agent will check the registry in ~3 minutes and perform an On Demand Scan. -ForegroundColor Green
 Write-Host [=]
 Write-Host [=]
 Write-Host [=]

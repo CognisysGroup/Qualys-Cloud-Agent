@@ -17,13 +17,8 @@ Non needed
 
 ## Authors
 
-**Zak Clifford** - [ZSECURE](https://github.com/ZSECURE)
+**Zak Clifford** - [@zak_hax](https://twitter.com/zak_hax)
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
-
-## About Me
-
-- Personal Twitter: [@zak_hax](https://twitter.com/zak_hax)
-- Website: [zsecure.uk](https://zsecure.uk/)
